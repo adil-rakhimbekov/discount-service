@@ -1,0 +1,7 @@
+spring:
+  data:
+    mongodb:
+      uri: ${MONGODB_URL:mongodb://localhost:27017/discount}
+mongock:
+  migration-scan-package:
+    - kz.adil.discountservice.migration

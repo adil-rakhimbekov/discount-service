@@ -1,0 +1,13 @@
+version: "3.7"
+
+volumes:
+  mongodb_d:
+    driver: local
+
+services:
+  mongodb:
+    image: mongo:latest
+    volumes:
+      - mongodb_d:/tmp/discount
+    ports:
+      - 27017:27017
