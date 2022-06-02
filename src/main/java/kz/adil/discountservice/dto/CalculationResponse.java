@@ -1,4 +1,4 @@
-package kz.adil.discountservice.model.dto;
+package kz.adil.discountservice.dto;
 
 import lombok.Builder;
 import lombok.Getter;

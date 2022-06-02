@@ -1,9 +1,9 @@
 package kz.adil.discountservice.service.impl;
 
 import kz.adil.discountservice.exception.ValidationException;
-import kz.adil.discountservice.model.Item;
-import kz.adil.discountservice.model.Product;
-import kz.adil.discountservice.model.dto.BillRequest;
+import kz.adil.discountservice.model.bill.Item;
+import kz.adil.discountservice.model.bill.Product;
+import kz.adil.discountservice.dto.BillRequest;
 import kz.adil.discountservice.service.ValidationService;
 import org.springframework.stereotype.Service;
 

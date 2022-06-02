@@ -1,6 +1,6 @@
-package kz.adil.discountservice.model.dto;
+package kz.adil.discountservice.dto;
 
-import kz.adil.discountservice.model.Item;
+import kz.adil.discountservice.model.bill.Item;
 import lombok.Data;
 
 import java.util.List;

@@ -1,10 +1,10 @@
 package kz.adil.discountservice.service.impl;
 
-import kz.adil.discountservice.model.Bill;
-import kz.adil.discountservice.model.User;
-import kz.adil.discountservice.model.dto.BillRequest;
-import kz.adil.discountservice.model.dto.CalculationResponse;
-import kz.adil.discountservice.model.dto.DiscountInfo;
+import kz.adil.discountservice.model.bill.Bill;
+import kz.adil.discountservice.model.user.User;
+import kz.adil.discountservice.dto.BillRequest;
+import kz.adil.discountservice.dto.CalculationResponse;
+import kz.adil.discountservice.dto.DiscountInfo;
 import kz.adil.discountservice.service.BillingService;
 import kz.adil.discountservice.service.DiscountService;
 import kz.adil.discountservice.service.UserRetrievingService;

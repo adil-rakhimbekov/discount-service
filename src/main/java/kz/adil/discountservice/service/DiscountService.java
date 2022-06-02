@@ -1,7 +1,7 @@
 package kz.adil.discountservice.service;
 
-import kz.adil.discountservice.model.Bill;
-import kz.adil.discountservice.model.dto.DiscountInfo;
+import kz.adil.discountservice.model.bill.Bill;
+import kz.adil.discountservice.dto.DiscountInfo;
 
 public interface DiscountService {
     DiscountInfo calculateDiscount(Bill bill);

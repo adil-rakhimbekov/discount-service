@@ -3,11 +3,12 @@ package kz.adil.discountservice.migration;
 import io.mongock.api.annotations.ChangeUnit;
 import io.mongock.api.annotations.Execution;
 import io.mongock.api.annotations.RollbackExecution;
-import kz.adil.discountservice.model.*;
+import kz.adil.discountservice.model.bill.ProductType;
 import kz.adil.discountservice.model.discount.AbstractDiscount;
 import kz.adil.discountservice.model.discount.BillDiscount;
 import kz.adil.discountservice.model.discount.ItemDiscount;
 import kz.adil.discountservice.model.discount.LoyaltyDiscount;
+import kz.adil.discountservice.model.user.UserType;
 import kz.adil.discountservice.repository.DiscountRepository;
 import lombok.RequiredArgsConstructor;
 
@@ -16,7 +17,7 @@ import java.time.Period;
 import java.util.ArrayList;
 import java.util.List;
 
-import static kz.adil.discountservice.model.ProductType.*;
+import static kz.adil.discountservice.model.bill.ProductType.*;
 
 @RequiredArgsConstructor
 @ChangeUnit(id = "discount_groups", order = "002", author = "a.rakhimbekov")

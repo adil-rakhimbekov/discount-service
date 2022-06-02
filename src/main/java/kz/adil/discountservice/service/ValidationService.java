@@ -1,6 +1,6 @@
 package kz.adil.discountservice.service;
 
-import kz.adil.discountservice.model.dto.BillRequest;
+import kz.adil.discountservice.dto.BillRequest;
 
 public interface ValidationService {
     int REQUEST_IS_EMPTY = 1001;

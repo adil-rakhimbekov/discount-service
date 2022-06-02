@@ -1,7 +1,6 @@
-package kz.adil.discountservice.model;
+package kz.adil.discountservice.model.user;
 
-import lombok.Builder;
-import lombok.Data;
+import lombok.*;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.security.core.GrantedAuthority;
@@ -13,7 +12,7 @@ import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
 
-@Data
+@Getter
 @Builder
 @Document(collection = "users")
 public class User implements UserDetails {

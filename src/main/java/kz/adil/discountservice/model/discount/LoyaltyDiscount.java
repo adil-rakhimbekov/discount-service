@@ -1,12 +1,15 @@
 package kz.adil.discountservice.model.discount;
 
-import kz.adil.discountservice.model.*;
+import kz.adil.discountservice.model.bill.Bill;
+import kz.adil.discountservice.model.bill.Item;
+import kz.adil.discountservice.model.bill.ProductType;
+import kz.adil.discountservice.model.user.User;
+import kz.adil.discountservice.model.user.UserType;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 
 import java.math.BigDecimal;
-import java.math.RoundingMode;
 import java.time.LocalDate;
 import java.time.Period;
 import java.util.List;
@@ -36,7 +39,7 @@ public class LoyaltyDiscount extends ItemDiscount {
             if((super.getIncludedTypes().isEmpty() || super.getIncludedTypes().contains(productType)) && !super.getExcludedTypes().contains(productType)) {
                 final BigDecimal discountByCurrentItem = item.originalAmount()
                         .multiply(super.getPercent())
-                        .divide(BigDecimal.valueOf(100), RoundingMode.UNNECESSARY)
+                        .divide(BigDecimal.valueOf(100))
                         .add(super.getAmount());
                 discountAmount = discountAmount.add(discountByCurrentItem);
             }

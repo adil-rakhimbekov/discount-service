@@ -1,4 +1,4 @@
-package kz.adil.discountservice.model;
+package kz.adil.discountservice.model.bill;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

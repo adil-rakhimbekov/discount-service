@@ -1,6 +1,6 @@
 package kz.adil.discountservice.model.discount;
 
-import kz.adil.discountservice.model.Bill;
+import kz.adil.discountservice.model.bill.Bill;
 
 import java.math.BigDecimal;
 

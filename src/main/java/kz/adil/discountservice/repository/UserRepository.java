@@ -1,6 +1,6 @@
 package kz.adil.discountservice.repository;
 
-import kz.adil.discountservice.model.User;
+import kz.adil.discountservice.model.user.User;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.mongodb.repository.Query;
 import org.springframework.stereotype.Repository;

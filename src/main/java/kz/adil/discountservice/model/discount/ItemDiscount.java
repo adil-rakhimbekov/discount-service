@@ -1,9 +1,9 @@
 package kz.adil.discountservice.model.discount;
 
-import kz.adil.discountservice.model.Bill;
-import kz.adil.discountservice.model.Item;
-import kz.adil.discountservice.model.ProductType;
-import kz.adil.discountservice.model.UserType;
+import kz.adil.discountservice.model.bill.Bill;
+import kz.adil.discountservice.model.bill.Item;
+import kz.adil.discountservice.model.bill.ProductType;
+import kz.adil.discountservice.model.user.UserType;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;

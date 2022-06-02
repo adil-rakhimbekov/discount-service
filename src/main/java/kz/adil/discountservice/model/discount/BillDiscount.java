@@ -1,10 +1,9 @@
 package kz.adil.discountservice.model.discount;
 
-import kz.adil.discountservice.model.Bill;
+import kz.adil.discountservice.model.bill.Bill;
 import lombok.*;
 
 import java.math.BigDecimal;
-import java.math.RoundingMode;
 
 @Getter
 @Setter
@@ -23,7 +22,7 @@ public class BillDiscount extends AbstractDiscount {
         final BigDecimal remainder = originalAmount.remainder(roundingAmount);
         final BigDecimal discountableAmount = originalAmount.subtract(remainder);
         return discountableAmount.multiply(super.getPercent())
-                .divide(BigDecimal.valueOf(100), RoundingMode.UNNECESSARY)
+                .divide(BigDecimal.valueOf(100))
                 .add(super.getAmount());
     }
 }

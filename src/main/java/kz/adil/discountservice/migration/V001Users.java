@@ -3,8 +3,8 @@ package kz.adil.discountservice.migration;
 import io.mongock.api.annotations.ChangeUnit;
 import io.mongock.api.annotations.Execution;
 import io.mongock.api.annotations.RollbackExecution;
-import kz.adil.discountservice.model.User;
-import kz.adil.discountservice.model.UserType;
+import kz.adil.discountservice.model.user.User;
+import kz.adil.discountservice.model.user.UserType;
 import kz.adil.discountservice.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 

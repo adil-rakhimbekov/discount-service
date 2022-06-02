@@ -1,10 +1,12 @@
-package kz.adil.discountservice.model;
+package kz.adil.discountservice.model.bill;
 
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.math.BigDecimal;
 
-@Data
+@Getter
+@Setter
 public class Product {
     private String name;
     private ProductType type;

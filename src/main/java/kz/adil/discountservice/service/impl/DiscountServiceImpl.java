@@ -1,8 +1,8 @@
 package kz.adil.discountservice.service.impl;
 
 import kz.adil.discountservice.model.discount.AbstractDiscount;
-import kz.adil.discountservice.model.Bill;
-import kz.adil.discountservice.model.dto.DiscountInfo;
+import kz.adil.discountservice.model.bill.Bill;
+import kz.adil.discountservice.dto.DiscountInfo;
 import kz.adil.discountservice.repository.DiscountRepository;
 import kz.adil.discountservice.service.DiscountService;
 import lombok.RequiredArgsConstructor;

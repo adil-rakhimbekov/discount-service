@@ -1,7 +1,7 @@
 package kz.adil.discountservice.controller;
 
-import kz.adil.discountservice.model.dto.BillRequest;
-import kz.adil.discountservice.model.dto.CalculationResponse;
+import kz.adil.discountservice.dto.BillRequest;
+import kz.adil.discountservice.dto.CalculationResponse;
 import kz.adil.discountservice.service.BillingService;
 import kz.adil.discountservice.service.ValidationService;
 import lombok.RequiredArgsConstructor;
