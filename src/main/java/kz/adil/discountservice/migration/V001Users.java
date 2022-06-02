@@ -21,24 +21,9 @@ public class V001Users {
     @Execution
     public void execute() {
         final List<User> users = new ArrayList<>();
-        users.add(User.builder()
-                .name("user1")
-                .password("user1")
-                .createdDate(LocalDate.now())
-                .types(List.of(UserType.EMPLOYEE))
-                .build());
-        users.add(User.builder()
-                .name("user2")
-                .password("user2")
-                .createdDate(LocalDate.now())
-                .types(List.of(UserType.AFFILIATE))
-                .build());
-        users.add(User.builder()
-                .name("user3")
-                .password("user3")
-                .createdDate(LocalDate.now().minusYears(3))
-                .types(List.of(UserType.CUSTOMER))
-                .build());
+        users.add(new User("user1", "123", LocalDate.now(), List.of(UserType.EMPLOYEE)));
+        users.add(new User("user2", "123", LocalDate.now(), List.of(UserType.AFFILIATE)));
+        users.add(new User("user2", "123", LocalDate.now().minusYears(3), List.of(UserType.CUSTOMER)));
         userRepository.saveAll(users);
     }
 

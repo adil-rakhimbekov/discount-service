@@ -42,35 +42,35 @@ docker-compose -f ./docker/docker-compose.yml down
 Basic authorization is used.
 Users are automatically created:
 ```shell
-user1 / user1 #EMPLOYEE
-user2 / user2 #AFFILATE
-user3 / user3 #CUSTOMER
+user1 / 123 #EMPLOYEE
+user2 / 123 #AFFILATE
+user3 / 123 #CUSTOMER
 ```
   
 - Request example
 ```shell
-curl --location --request POST 'localhost:8080/api/v1/calculate' \
-  --header 'Authorization: Basic dXNlcjE6dXNlcjE=' \
+curl --location --request POST 'localhost:8080/api/v1/discount/calculate' \
+  --header 'Authorization: Basic dXNlcjE6MTIz' \
   --header 'Content-Type: application/json' \
   --data-raw '{
-  "items": [
-  {
-  "product":{
-  "name": "bread",
-  "type": "grocery",
-  "price": "99.0"
-  },
-  "quantity": 1
-  },
-  {
-  "product":{
-  "name": "jeans",
-  "type": "clothes",
-  "price": "990.0"
-  },
-  "quantity": 1
-  }
-  ]
+      "items": [
+        {
+          "product":{
+              "name": "bread",
+              "type": "grocery",
+              "price": "99.0"
+          },
+          "quantity": 1
+        },
+        {
+          "product":{
+          "name": "jeans",
+          "type": "clothes",
+          "price": "990.0"
+          },
+        "quantity": 1
+        }
+      ]
   }'
 ```
   

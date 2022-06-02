@@ -1,6 +1,7 @@
 package kz.adil.discountservice.model.user;
 
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.security.core.GrantedAuthority;
@@ -13,7 +14,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Getter
-@Builder
+@AllArgsConstructor
 @Document(collection = "users")
 public class User implements UserDetails {
     @Id

@@ -1,7 +1,7 @@
 package kz.adil.discountservice.model.bill;
 
 import kz.adil.discountservice.model.user.User;
-import lombok.Builder;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.data.annotation.Transient;
@@ -11,7 +11,7 @@ import java.util.List;
 
 @Getter
 @Setter
-@Builder
+@AllArgsConstructor
 public class Bill implements Discountable {
     private User customer;
     private List<Item> items;

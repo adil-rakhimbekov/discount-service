@@ -1,8 +1,5 @@
 package kz.adil.discountservice.service.impl;
 
-import static org.junit.jupiter.api.Assertions.assertThrows;
-import static org.mockito.Mockito.*;
-
 import kz.adil.discountservice.model.user.User;
 import kz.adil.discountservice.model.user.UserType;
 import kz.adil.discountservice.repository.UserRepository;
@@ -23,17 +20,20 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-@ContextConfiguration(classes = {MongoUserDetailsService.class})
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.mockito.Mockito.*;
+
+@ContextConfiguration(classes = {CustomUserDetailsService.class})
 @ExtendWith(SpringExtension.class)
 class MongoUserDetailsServiceTest {
     @Autowired
-    private MongoUserDetailsService mongoUserDetailsService;
+    private CustomUserDetailsService mongoUserDetailsService;
 
     @MockBean
     private UserRepository userRepository;
 
     /**
-     * Method under test: {@link MongoUserDetailsService#loadUserByUsername(String)}
+     * Method under test: {@link CustomUserDetailsService#loadUserByUsername(String)}
      */
     @Test
     void testLoadUserByUsername() throws UsernameNotFoundException {
@@ -49,7 +49,7 @@ class MongoUserDetailsServiceTest {
     }
 
     /**
-     * Method under test: {@link MongoUserDetailsService#loadUserByUsername(String)}
+     * Method under test: {@link CustomUserDetailsService#loadUserByUsername(String)}
      */
     @Test
     void testLoadUserByUsername2() throws UsernameNotFoundException {
@@ -63,7 +63,7 @@ class MongoUserDetailsServiceTest {
     }
 
     /**
-     * Method under test: {@link MongoUserDetailsService#getCurrentUser()}
+     * Method under test: {@link CustomUserDetailsService#getCurrentUser()}
      */
     @Test
     void testGetCurrentUser() {
@@ -87,7 +87,7 @@ class MongoUserDetailsServiceTest {
     }
 
     /**
-     * Method under test: {@link MongoUserDetailsService#getCurrentUser()}
+     * Method under test: {@link CustomUserDetailsService#getCurrentUser()}
      */
     @Test
     void testGetCurrentUser2() {

@@ -1,9 +1,9 @@
 package kz.adil.discountservice.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import kz.adil.discountservice.model.bill.Item;
 import kz.adil.discountservice.dto.BillRequest;
 import kz.adil.discountservice.dto.CalculationResponse;
+import kz.adil.discountservice.model.bill.Item;
 import kz.adil.discountservice.service.BillingService;
 import kz.adil.discountservice.service.ValidationService;
 import org.junit.jupiter.api.Test;
@@ -43,12 +43,8 @@ class DiscountControllerTest {
         billRequest.setItems(items);
 
         ObjectMapper objectMapper = new ObjectMapper();
-        final CalculationResponse calculationResponse = CalculationResponse.builder()
-                .createdDatetime(ZonedDateTime.now())
-                .discountAmount("10")
-                .netAmount("90")
-                .totalAmount("100")
-                .build();
+        final CalculationResponse calculationResponse = new CalculationResponse(ZonedDateTime.now(), "10",
+                "100", "90");
         when(billingService.calculateBill(billRequest)).thenReturn(calculationResponse);
 
         // Act

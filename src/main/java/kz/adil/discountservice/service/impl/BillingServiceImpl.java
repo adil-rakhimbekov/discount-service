@@ -1,10 +1,10 @@
 package kz.adil.discountservice.service.impl;
 
-import kz.adil.discountservice.model.bill.Bill;
-import kz.adil.discountservice.model.user.User;
 import kz.adil.discountservice.dto.BillRequest;
 import kz.adil.discountservice.dto.CalculationResponse;
 import kz.adil.discountservice.dto.DiscountInfo;
+import kz.adil.discountservice.model.bill.Bill;
+import kz.adil.discountservice.model.user.User;
 import kz.adil.discountservice.service.BillingService;
 import kz.adil.discountservice.service.DiscountService;
 import kz.adil.discountservice.service.UserRetrievingService;
@@ -32,21 +32,13 @@ public class BillingServiceImpl implements BillingService {
 
     private Bill convertToBill(BillRequest billRequest) {
         final User currentUser = userRetrievingService.getCurrentUser();
-        return Bill.builder()
-                .customer(currentUser)
-                .items(billRequest.getItems())
-                .build();
+        return new Bill(currentUser, billRequest.getItems());
     }
 
     private CalculationResponse prepareResult(Bill bill, DiscountInfo discountInfo) {
         final BigDecimal discountAmount = discountInfo.getDiscountAmount();
         final BigDecimal totalAmount = bill.originalAmount();
         final BigDecimal netAmount = totalAmount.subtract(discountAmount);
-        return CalculationResponse.builder()
-                .discountAmount(String.valueOf(discountAmount))
-                .createdDatetime(ZonedDateTime.now())
-                .totalAmount(String.valueOf(totalAmount))
-                .netAmount(String.valueOf(netAmount))
-                .build();
+        return new CalculationResponse(ZonedDateTime.now(), String.valueOf(discountAmount), String.valueOf(totalAmount), String.valueOf(netAmount));
     }
 }

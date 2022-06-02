@@ -16,7 +16,7 @@ import java.util.List;
 
 @Service
 @RequiredArgsConstructor
-public class MongoUserDetailsService implements UserDetailsService, UserRetrievingService {
+public class CustomUserDetailsService implements UserDetailsService, UserRetrievingService {
     private final UserRepository userRepository;
 
     @Override
@@ -29,11 +29,6 @@ public class MongoUserDetailsService implements UserDetailsService, UserRetrievi
         if (SecurityContextHolder.getContext().getAuthentication().isAuthenticated()) {
             return (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         }
-        return User.builder()
-                .createdDate(LocalDate.now())
-                .name("guest")
-                .types(List.of(UserType.GUEST))
-                .build();
-
+        return new User("guest", "", LocalDate.now(), List.of(UserType.GUEST));
     }
 }

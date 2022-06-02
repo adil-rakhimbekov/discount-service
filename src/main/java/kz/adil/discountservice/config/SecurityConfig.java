@@ -1,6 +1,6 @@
 package kz.adil.discountservice.config;
 
-import kz.adil.discountservice.service.impl.MongoUserDetailsService;
+import kz.adil.discountservice.service.impl.CustomUserDetailsService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
@@ -14,7 +14,7 @@ import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 @RequiredArgsConstructor
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
-    private final MongoUserDetailsService mongoUserDetailsService;
+    private final CustomUserDetailsService mongoUserDetailsService;
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
