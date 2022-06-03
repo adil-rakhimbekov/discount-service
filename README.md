@@ -90,7 +90,7 @@ curl --location --request POST 'localhost:8080/api/v1/discount/calculate' \
 
 ```shell
 chmod +x ./script/run_test.sh
-./run_test.sh
+./script/run_test.sh
 ```
 
 - For other OS
