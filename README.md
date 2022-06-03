@@ -16,7 +16,7 @@ For unauthorized users, all operations are performed as a guest.
 ## Features
 
 - Cross-platform: Windows, Mac, and Linux are officially supported.
-- Java 8
+- Java 11
 - Spring Boot 2.7.0
 - Apache Maven 3.8.1
 - Docker 20.10.12
